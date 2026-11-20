@@ -176,3 +176,27 @@ h3 { font-size: clamp(2.25rem, 5vw, 4rem); }
 @media (prefers-reduced-motion: reduce) {
   .safe-door { transition: none; }
 }
+
+.bit-heart-target {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  perspective: 400px;
+}
+.bit-heart-target .bit-heart {
+  translate: var(--heart-x, 0px) var(--heart-y, 0px);
+  rotate: var(--heart-tilt, 0deg);
+  transition: translate 160ms ease-out, rotate 160ms ease-out,
+    color 160ms ease-out, text-shadow 160ms ease-out;
+}
+.bit-heart-target.is-tracking .bit-heart {
+  color: #ffd1ea;
+  text-shadow: 0 0 7px #ff90ca, 0 0 23px #ff349c;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bit-heart-target .bit-heart {
+    translate: none;
+    rotate: none;
+    transition: none;
+  }
+}
