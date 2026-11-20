@@ -6,6 +6,7 @@
   <meta name="description" content="Portfólio de Sara Thais, estudante de Engenharia de Software e analista de NOC.">
   <title>Sara Thais | Portfólio</title>
   <link rel="stylesheet" href="styles.css">
+  <script defer src="coflume.js"></script>
 </head>
 <body>
   <header class="wrap">
@@ -48,6 +49,20 @@
             <a class="button" href="https://github.com/sarathais-tech/coflume">Ver código do Coflume</a>
           </div>
           <img src="assets/coflume-recorte.webp" alt="Protótipo do Coflume com porta, teclado e tela ligada." width="720" height="960" loading="lazy" class="project-photo">
+          <section class="safe-game" aria-labelledby="game-title">
+            <div class="safe-shell" aria-hidden="true">
+              <div class="safe-interior">✦</div>
+              <div class="safe-door"><span>COFLUME</span><i></i></div>
+            </div>
+            <div class="game-controls">
+              <h4 id="game-title">Jogar Coflume</h4>
+              <p>Acerte duas de três perguntas para destrancar o cofre.</p>
+              <p id="game-status" role="status"></p>
+              <h5 id="game-question" tabindex="-1" hidden></h5>
+              <div id="game-answers" class="game-answers" role="group" aria-labelledby="game-question" hidden></div>
+              <button class="button" id="game-advance" type="button">Iniciar desafio</button>
+            </div>
+          </section>
         </article>
         <article class="card">
           <p class="label">TCC · Software</p>
