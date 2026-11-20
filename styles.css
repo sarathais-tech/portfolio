@@ -1,17 +1,17 @@
 :root {
-  color-scheme: dark;
-  --background: #180e1b;
-  --panel: #2b1629;
-  --text: #fff3eb;
-  --muted: #ead1dd;
-  --pink: #ff83b7;
-  --border: #805373;
-  --blue: #acd9ff;
+  color-scheme: light;
+  --background: #fff6ef;
+  --panel: #fffaf6;
+  --text: #412931;
+  --muted: #624550;
+  --pink: #a93261;
+  --border: #deafbc;
+  --blue: #365d83;
 }
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  background: radial-gradient(ellipse at 84% 12%, #4e1d4a, transparent 45%), var(--background);
+  background: radial-gradient(ellipse at 84% 12%, #f5c3d7, transparent 45%), var(--background);
   color: var(--text);
   font: 1rem/1.6 system-ui, sans-serif;
 }
@@ -38,9 +38,9 @@ h2 { font-size: clamp(2.35rem, 6vw, 4.2rem); }
 h3 { font-size: clamp(2rem, 4vw, 3.1rem); }
 .intro, .card p:not(.label), .profile p { color: var(--muted); max-width: 53ch; }
 .actions { margin-top: 1.25rem; }
-.button, .outline { display: inline-block; padding: .65rem 1rem; border-radius: .6rem; font-weight: 700; text-decoration: none; }
-.button { background: var(--pink); color: var(--background); }
-.button:hover { background: #ffb0cf; }
+.button, .outline { display: inline-block; padding: .65rem 1rem; border-radius: 999px; font-weight: 700; text-decoration: none; }
+.button { background: var(--pink); color: #fff; }
+.button:hover { background: #87234b; }
 .outline { border: 1px solid var(--border); }
 .outline:hover { border-color: var(--pink); }
 .orbit {
@@ -48,12 +48,12 @@ h3 { font-size: clamp(2rem, 4vw, 3.1rem); }
   display: grid;
   place-items: center;
   border: 1px solid var(--border);
-  border-radius: 1.4rem;
+  border-radius: 2rem;
   background:
-    radial-gradient(circle, #ff83b735, transparent 62%),
-    repeating-linear-gradient(90deg, #ff9ac521 0 1px, transparent 1px 27px),
-    repeating-linear-gradient(0deg, #ff9ac521 0 1px, transparent 1px 27px),
-    #2b1629;
+    radial-gradient(circle, #ef9cbd5c, transparent 62%),
+    repeating-linear-gradient(90deg, #5177a023 0 1px, transparent 1px 27px),
+    repeating-linear-gradient(0deg, #5177a023 0 1px, transparent 1px 27px),
+    #fae0e9;
 }
 .chip {
   display: grid;
@@ -64,8 +64,8 @@ h3 { font-size: clamp(2rem, 4vw, 3.1rem); }
   border: 2px solid var(--pink);
   border-radius: 24%;
   transform: rotate(-12deg);
-  background: #32152e;
-  box-shadow: 0 0 0 10px #ff83b720, 0 0 42px #ff83b75c;
+  background: #f8bdd5;
+  box-shadow: 0 0 0 8px #fff7ee, 10px 13px 0 #9c608f33;
 }
 .chip span { color: var(--pink); font-size: clamp(2.5rem, 8vw, 5rem); }
 .section { border-top: 1px solid var(--border); padding-block: 2.8rem; }
@@ -78,15 +78,44 @@ h3 { font-size: clamp(2rem, 4vw, 3.1rem); }
   gap: 1rem;
   padding: clamp(1.2rem, 4vw, 2.4rem);
   border: 1px solid var(--border);
-  border-radius: 1.2rem;
+  border-radius: 1.8rem;
   background: var(--panel);
 }
-.featured { background: linear-gradient(140deg, #502844, var(--panel)); }
+.featured { background: linear-gradient(140deg, #f9d4e3, var(--panel)); }
 .tags { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: 0; list-style: none; }
-.tags li { padding: .15rem .55rem; border-radius: .4rem; border: 1px solid var(--border); color: var(--blue); font-size: .9rem; }
+.tags li { padding: .15rem .55rem; border-radius: 999px; border: 1px solid var(--border); color: var(--blue); font-size: .9rem; }
 .profile { align-items: start; }
 .profile .actions { margin-top: 0; }
 @media (max-width: 690px) {
   .hero, .projects, .profile { grid-template-columns: 1fr; }
   .orbit { min-height: 215px; }
+}
+
+h1, h2, h3 {
+  font-family: ui-rounded, "Trebuchet MS", system-ui, sans-serif;
+}
+.orbit {
+  position: relative;
+  overflow: hidden;
+}
+.orbit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, #53759d70 1.5px, transparent 2px) 0 0 / 27px 27px;
+}
+.card {
+  box-shadow: 0 8px 24px #9e577217;
+}
+.tags li, .outline {
+  background: #fffaf6;
+}
+.project-photo {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  padding: clamp(.6rem, 2vw, 1.25rem);
+  border: 1px solid var(--border);
+  border-radius: 1.35rem;
+  background: radial-gradient(ellipse, #fff8ef, #f1adc9);
 }
