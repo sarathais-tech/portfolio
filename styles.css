@@ -2,11 +2,11 @@
   color-scheme: light;
   --background: #fff6ef;
   --panel: #fffaf6;
-  --text: #412931;
-  --muted: #624550;
-  --pink: #a93261;
-  --border: #deafbc;
-  --blue: #365d83;
+  --text: #422D28;
+  --muted: #6B4C43;
+  --pink: #75453C;
+  --border: #D8A7AA;
+  --blue: #76534C;
 }
 * { box-sizing: border-box; }
 body {
@@ -40,7 +40,7 @@ h3 { font-size: clamp(2rem, 4vw, 3.1rem); }
 .actions { margin-top: 1.25rem; }
 .button, .outline { display: inline-block; padding: .65rem 1rem; border-radius: 999px; font-weight: 700; text-decoration: none; }
 .button { background: var(--pink); color: #fff; }
-.button:hover { background: #87234b; }
+.button:hover { background: #593229; }
 .outline { border: 1px solid var(--border); }
 .outline:hover { border-color: var(--pink); }
 .orbit {
@@ -51,8 +51,8 @@ h3 { font-size: clamp(2rem, 4vw, 3.1rem); }
   border-radius: 2rem;
   background:
     radial-gradient(circle, #ef9cbd5c, transparent 62%),
-    repeating-linear-gradient(90deg, #5177a023 0 1px, transparent 1px 27px),
-    repeating-linear-gradient(0deg, #5177a023 0 1px, transparent 1px 27px),
+    repeating-linear-gradient(90deg, #75453C23 0 1px, transparent 1px 27px),
+    repeating-linear-gradient(0deg, #75453C23 0 1px, transparent 1px 27px),
     #fae0e9;
 }
 .chip {
@@ -102,7 +102,7 @@ h1, h2, h3 {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle, #53759d70 1.5px, transparent 2px) 0 0 / 27px 27px;
+  background: radial-gradient(circle, #75453C50 1.5px, transparent 2px) 0 0 / 27px 27px;
 }
 .card {
   box-shadow: 0 8px 24px #9e577217;
